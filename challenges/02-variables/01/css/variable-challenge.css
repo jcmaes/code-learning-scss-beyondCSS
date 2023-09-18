@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 1.75rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: #201e1f;
+  background-color: #f8f7f7;
+  /* this is being used to center the content on the screen */
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.card {
+  display: grid;
+  gap: 0.75em;
+  width: min(90%, 60rem);
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #201e1f;
+}
+.card__title {
+  color: #da3f0b;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.btn--primary {
+  color: #f8f7f7;
+  background-color: #da3f0b;
+  border: 2px solid #da3f0b;
+}
+.btn--primary:hover {
+  background-color: #201e1f;
+  box-shadow: 0 0 10px #da3f0b;
+}
+.btn--primary:focus {
+  background-color: #201e1f;
+}
+.btn--outline {
+  color: #da3f0b;
+  background-color: #f8f7f7;
+  border: 2px solid #da3f0b;
+}
+.btn--outline:hover {
+  color: #f8f7f7;
+  background-color: #201e1f;
+  box-shadow: 0 0 10px #da3f0b;
+}
+.btn--outline:focus {
+  background-color: #201e1f;
+}
+
+.flex-group {
+  display: flex;
+  gap: 1rem;
+}
+
+/*# sourceMappingURL=variable-challenge.css.map */
