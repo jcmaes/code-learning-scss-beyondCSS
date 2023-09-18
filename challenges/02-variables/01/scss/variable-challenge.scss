@@ -1,3 +1,26 @@
+$clr-white: #f8f7f7;
+$clr-black: #201e1f;
+$clr-red: #da3f0b;
+
+$page-bg-clr: $clr-white;
+$btn-primary-clr: $clr-white;
+$btn-outline-bg-clr: $clr-white;
+$btn-primary-clr-hover: $clr-white;
+$btn-outline-clr-hover: $clr-white;
+$body-clr: $clr-black;
+$btn-primary-bg-clr-hover: $clr-black;
+$btn-primary-bg-clr-focus: $clr-black;
+$btn-outline-bg-clr-hover: $clr-black;
+$btn-outline-bg-clr-focus: $clr-black;
+$card-shadow-clr: $clr-black;
+$title-clr: $clr-red;
+$btn-primary-bg-clr: $clr-red;
+$btn-primary-border-clr: $clr-red;
+$btn-outline-clr: $clr-red;
+$btn-outline-border-clr: $clr-red;
+$btn-primary-shadow-clr-hover: $clr-red;
+$btn-outline-shadow-clr-hover: $clr-red;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +29,9 @@
 body {
   font-size: 1.75rem;
   font-family: system-ui, sans-serif;
-  line-height: 1.6;
+  line-height: 1.5;
+  color: $body-clr;
+  background-color: $page-bg-clr;
 
   /* this is being used to center the content on the screen */
   display: grid;
@@ -19,12 +44,50 @@ body {
   gap: 0.75em;
   width: min(90%, 60rem);
   padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 0 20px $card-shadow-clr;
+
+  &__title {
+    color: $title-clr;
+  }
 }
 
 .btn {
   display: inline-block;
   padding: 0.5em 1.5em;
   text-decoration: none;
+  border-radius: 8px;
+
+  &--primary {
+    color: $btn-primary-clr;
+    background-color: $btn-primary-bg-clr;
+    border: 2px solid $btn-primary-border-clr;
+
+    &:hover {
+      background-color: $btn-primary-bg-clr-hover;
+      box-shadow: 0 0 10px $btn-primary-shadow-clr-hover;
+    }
+
+    &:focus {
+      background-color: $btn-primary-bg-clr-focus;
+    }
+  }
+
+  &--outline {
+    color: $btn-outline-clr;
+    background-color: $btn-outline-bg-clr;
+    border: 2px solid $btn-outline-border-clr;
+
+    &:hover {
+      color: $btn-outline-clr-hover;
+      background-color: $btn-outline-bg-clr-hover;
+      box-shadow: 0 0 10px $btn-outline-shadow-clr-hover;
+    }
+
+    &:focus {
+      background-color: $btn-outline-bg-clr-focus;
+    }
+  }
 }
 
 .flex-group {
