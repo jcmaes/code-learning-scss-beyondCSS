@@ -39,14 +39,13 @@ $size-36: 2.25rem;
 }
 
 // base styles
-
 body {
+  font-family: $ff-sans;
   font-size: $fs-400;
   font-weight: $fw-400;
-  font-family: $ff-sans;
   color: $color-neutral-900;
-  background-color: $color-neutral-100;
   text-align: center;
+  background-color: $color-neutral-100;
 }
 
 .container {
@@ -55,26 +54,30 @@ body {
 }
 
 .page-title {
+  margin-block: $size-32;
   color: $color-primary-400;
   font-size: $fs-900;
-  margin-block: $size-32;
 }
 
 .pricing-plans {
-  border: $size-8 solid $color-primary-400;
   display: flex;
+  border: $size-8 solid $color-primary-400;
 }
 
 .tier {
-  flex: 1;
-  padding: $size-36;
   display: grid;
   gap: $size-20;
+  flex: 1;
+  padding: $size-36;
 
   &__title {
-    text-transform: uppercase;
-    font-weight: $fw-700;
     color: $color-primary-400;
+    font-weight: $fw-700;
+    text-transform: uppercase;
+
+    .inverted & {
+      color: $color-neutral-100;
+    }
   }
 
   &__feature-list {
@@ -89,6 +92,10 @@ body {
       margin-block: $size-20;
       background-color: $color-neutral-900;
       opacity: 0.2;
+
+      .inverted & {
+        background-color: $color-neutral-100;
+      }
     }
   }
 
@@ -97,20 +104,29 @@ body {
     font-weight: $fw-700;
 
     span {
-      font-weight: $fw-400;
       font-size: $fs-600;
+      font-weight: $fw-400;
     }
   }
 }
 
 .button {
-  cursor: pointer;
-  border: 0;
-  text-transform: uppercase;
+  justify-self: center;
+  padding: 1em 1.5em;
   font-weight: $fw-700;
   color: $color-neutral-100;
+  text-transform: uppercase;
   background-color: $color-primary-400;
-  padding: 1em 1.5em;
+  border: 0;
+  cursor: pointer;
 
-  justify-self: center;
+  .inverted & {
+    color: $color-primary-400;
+    background-color: $color-neutral-100;
+  }
+}
+
+.inverted {
+  background: $color-primary-400;
+  color: $color-neutral-100;
 }
