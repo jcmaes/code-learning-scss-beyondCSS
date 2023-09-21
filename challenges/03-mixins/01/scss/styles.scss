@@ -9,3 +9,71 @@ body {
   text-align: center;
   padding: 10vh 0;
 }
+
+@mixin gradient($deg, $color-1, $color-2) {
+  background: linear-gradient($deg, $color-1, $color-2);
+}
+
+.section {
+  &-one {
+    @include gradient(45deg, blue, red);
+  }
+
+  &-two {
+    @include gradient(45deg, yellow, green);
+  }
+
+  &-three {
+    @include gradient(45deg, pink, limegreen);
+  }
+}
+
+@mixin pseudo-underline($width, $height, $background-color, $margin) {
+  width: $width;
+  height: $height;
+  background-color: $background-color;
+  margin: $margin;
+  content: '';
+  display: block;
+}
+
+.title::after {
+  @include pseudo-underline(150px, 10px, rgba(white, 0.5), -10px auto 0);
+}
+
+@mixin ui-element($size, $color, $bg-color, $hover-color, $hover-bg-color) {
+  padding: $size calc($size * 3);
+  font-size: $size;
+  color: $color;
+  background-color: $bg-color;
+
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-bg-color;
+  }
+}
+
+.button {
+  &-one {
+    @include ui-element(1em, black, white, white, black);
+  }
+
+  &-two {
+    @include ui-element(1em, white, black, black, white);
+  }
+}
+
+.badge {
+  &-one,
+  &-two {
+    display: inline-block;
+  }
+
+  &-one {
+    @include ui-element(0.75em, black, white, white, black);
+  }
+
+  &-two {
+    @include ui-element(0.75em, white, black, black, white);
+  }
+}

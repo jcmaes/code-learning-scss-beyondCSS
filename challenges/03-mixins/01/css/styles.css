@@ -1,0 +1,77 @@
+body {
+  font-family: system-ui;
+  margin: 0;
+}
+
+.section-one,
+.section-two,
+.section-three {
+  text-align: center;
+  padding: 10vh 0;
+}
+
+.section-one {
+  background: linear-gradient(45deg, blue, red);
+}
+.section-two {
+  background: linear-gradient(45deg, yellow, green);
+}
+.section-three {
+  background: linear-gradient(45deg, pink, limegreen);
+}
+
+.title::after {
+  width: 150px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: -10px auto 0;
+  content: "";
+  display: block;
+}
+
+.button-one {
+  padding: 1em 3em;
+  font-size: 1em;
+  color: black;
+  background-color: white;
+}
+.button-one:hover {
+  color: white;
+  background-color: black;
+}
+.button-two {
+  padding: 1em 3em;
+  font-size: 1em;
+  color: white;
+  background-color: black;
+}
+.button-two:hover {
+  color: black;
+  background-color: white;
+}
+
+.badge-one, .badge-two {
+  display: inline-block;
+}
+.badge-one {
+  padding: 0.75em 2.25em;
+  font-size: 0.75em;
+  color: black;
+  background-color: white;
+}
+.badge-one:hover {
+  color: white;
+  background-color: black;
+}
+.badge-two {
+  padding: 0.75em 2.25em;
+  font-size: 0.75em;
+  color: white;
+  background-color: black;
+}
+.badge-two:hover {
+  color: black;
+  background-color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */
